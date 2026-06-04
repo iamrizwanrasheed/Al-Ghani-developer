@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+:root {
+  --background: #f8f7f3;
+  --foreground: #122016;
+  --forest: #0f170d;
+  --emerald: #0d4230;
+  --gold: #9c8f6c;
+  --ivory: #f5f5f5;
+  --mint: #dfeae4;
+  --sand: #fbfaf6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-display-serif);
+}
+
+* {
+  border-color: rgba(13, 66, 48, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(13, 66, 48, 0.08), transparent 24%),
+    linear-gradient(180deg, #fcfcf9 0%, #f7f5ef 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), Georgia, serif;
+  letter-spacing: -0.03em;
+}
+
+.rich-text img {
+  width: 100%;
+  border-radius: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(13, 66, 48, 0.1);
+  box-shadow: 0 24px 60px rgba(9, 23, 18, 0.08);
+}
+
+.rich-text iframe {
+  width: 100%;
+  min-height: 380px;
+  border: 0;
+  border-radius: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.rich-text table {
+  width: 100%;
+  overflow: hidden;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  border-radius: 1rem;
+}
+
+.rich-text th,
+.rich-text td {
+  border: 1px solid rgba(13, 66, 48, 0.1);
+  padding: 0.9rem 1rem;
+  text-align: left;
+}
+
+.rich-text p:empty,
+.rich-text h1:empty,
+.rich-text h2:empty,
+.rich-text h3:empty,
+.rich-text h4:empty,
+.rich-text span:empty {
+  display: none;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+}
